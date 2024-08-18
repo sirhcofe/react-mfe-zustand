@@ -48,7 +48,8 @@ module.exports = {
         mfe2: "mfe2@http://localhost:3002/remoteEntry.js",
       },
       exposes: {
-        "./useSharedStore": "./src/store/useSharedStore",
+        "./SharedStateProvider": "./src/utils/providers/SharedStateProvider",
+        "./useSharedStore": "./src/utils/store/useSharedStore",
       },
       shared: {
         ...pkg.devDependencies,
