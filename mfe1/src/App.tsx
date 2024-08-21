@@ -2,7 +2,6 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./style.css";
 
-import { SharedStateProvider } from "host/SharedStateProvider";
 import useSharedStore from "host/useSharedStore";
 import useLocalStore from "./utils/store/useLocalStore";
 
@@ -64,15 +63,13 @@ const Seperator = ({ text }: { text: string }) => {
 
 const Mfe = () => {
   return (
-    <SharedStateProvider>
-      <div className="w-screen h-screen flex flex-col items-center justify-center gap-y-4">
-        <p className="text-3xl font-bold">This is MFE1</p>
-        <Seperator text="Global store" />
-        <GlobalStore />
-        <Seperator text="Local store" />
-        <LocalStore />
-      </div>
-    </SharedStateProvider>
+    <div className="w-screen h-screen flex flex-col items-center justify-center gap-y-4">
+      <p className="text-3xl font-bold">This is MFE1</p>
+      <Seperator text="Global store" />
+      <GlobalStore />
+      <Seperator text="Local store" />
+      <LocalStore />
+    </div>
   );
 };
 
